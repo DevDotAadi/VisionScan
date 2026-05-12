@@ -1188,10 +1188,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
-# ── Vercel Build Compatibility ────────────────────────────────────────
-# Dummy WSGI app entrypoint to satisfy Vercel serverless function checks
-def app(environ, start_response):
-    start_response('200 OK', [('Content-Type', 'text/html; charset=utf-8')])
-    return [b"<h1>VisionScan Global</h1><p>Streamlit is active. Please launch locally using 'streamlit run app.py' or view the deployed instance on Streamlit Community Cloud.</p>"]
