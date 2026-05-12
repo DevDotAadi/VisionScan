@@ -1,7 +1,9 @@
 # Secrets and Configuration
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+.streamlit/secrets.toml
+kaggle.json
 
 # Kaggle & API Cache
 .kaggle/
@@ -9,12 +11,16 @@
 
 # Python Build & Caches
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
 .pytest_cache/
 .ipynb_checkpoints/
 .mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/
 
 # Virtual Environments
 .venv/
@@ -22,12 +28,19 @@ venv/
 ENV/
 env/
 
-# Datasets and Large Models (Local Ignored Paths)
+# IDE Caches
+.vscode/
+.idea/
+
+# Datasets, Models, and Outputs (Local Ignored Paths)
 models/
 data/
 results/
+reports/
 test_images/benign/
 test_images/malignant/
+tmp/
+temp/
 
 # Image/Weights Formats
 *.h5
