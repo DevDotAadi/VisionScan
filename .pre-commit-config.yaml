@@ -1,0 +1,25 @@
+# ==============================================================================
+# VisionScan Global — Pre-Commit Git Hooks Configuration
+# ==============================================================================
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+        description: Validates YAML configuration files.
+      - id: end-of-file-fixer
+        description: Ensures files end with a newline.
+      - id: trailing-whitespace
+        description: Trims trailing whitespace from source files.
+      - id: check-added-large-files
+        args: ['--maxkb=5000']
+        description: Prevents committing oversized binary assets.
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: package.lock
+        description: Prevents committing API keys, tokens, or private secrets.

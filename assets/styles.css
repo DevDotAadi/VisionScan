@@ -1,0 +1,740 @@
+/* Premium Meta-Inspired Stylesheet for VisionScan - Compressed & Tightened */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Canvas Overrides - Use Poppins/Inter as defaults without breaking system icons */
+html, body, .stApp {
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #ffffff !important;
+    color: #050505 !important;
+    letter-spacing: -0.16px !important;
+}
+
+/* Explicitly restore Material icon fonts for any icon containers to solve the collapse button issue completely */
+span[class*="material-symbols"],
+span[class*="MaterialSymbols"],
+[data-testid="stSidebarCollapseButton"] button span,
+[data-testid="collapsedSidebar"] button span,
+.material-icons,
+[class*="material-icons"] {
+    font-family: "Material Symbols Outlined", "Material Symbols Rounded", "Material Icons" !important;
+}
+
+/* Tighten Container Spacing */
+.block-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 3rem !important;
+    max-width: 1100px !important;
+}
+
+/* Tighten up Element Gap Spacings */
+.stElementContainer {
+    margin-bottom: 0.5rem !important;
+}
+
+div[data-testid="stVerticalBlock"] {
+    gap: 0.75rem !important;
+}
+
+/* Custom Headers Spacing */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    color: #050505 !important;
+    letter-spacing: -0.02em !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+}
+
+h2 {
+    font-size: 1.6rem !important;
+}
+
+h3 {
+    font-size: 1.2rem !important;
+}
+
+/* Force button wrapper blocks to span 100% of container width to guarantee identical horizontal button lengths */
+.stButton,
+div.stDownloadButton,
+[data-testid="stFileUploader"],
+div[data-testid="stElementContainer"] div.stButton,
+div[data-testid="stElementContainer"] div.stDownloadButton {
+    width: 100% !important;
+    min-width: 100% !important;
+    display: block !important;
+}
+
+/* Unified Button Styling (Identical Size, Font, and Saturated Visual Strength) - Bigger, Longer, Stronger */
+.stButton>button,
+div.stDownloadButton > button,
+[data-testid="stFileUploader"] button {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 52px !important;
+    border-radius: 100px !important;
+    font-family: 'Poppins', 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 0 32px !important;
+    background-color: #1877F2 !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(24, 119, 242, 0.1) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Ensure child layers inside any button type inherit the high-contrast white value */
+.stButton>button div, .stButton>button span, .stButton>button p,
+div.stDownloadButton > button div, div.stDownloadButton > button span, div.stDownloadButton > button p,
+[data-testid="stFileUploader"] button div, [data-testid="stFileUploader"] button span, [data-testid="stFileUploader"] button p {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    font-family: 'Poppins', 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+.stButton>button:hover,
+div.stDownloadButton > button:hover,
+[data-testid="stFileUploader"] button:hover {
+    background-color: #166FE5 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(24, 119, 242, 0.25) !important;
+    border: none !important;
+}
+
+.stButton>button:hover div, .stButton>button:hover span, .stButton>button:hover p,
+div.stDownloadButton > button:hover div, div.stDownloadButton > button:hover span, div.stDownloadButton > button:hover p,
+[data-testid="stFileUploader"] button:hover div, [data-testid="stFileUploader"] button:hover span, [data-testid="stFileUploader"] button:hover p {
+    color: #ffffff !important;
+}
+
+.stButton>button:active,
+div.stDownloadButton > button:active,
+[data-testid="stFileUploader"] button:active {
+    background-color: #1464CC !important;
+}
+
+/* Premium Rounded Cards - Tightened */
+.card {
+    background-color: #ffffff !important;
+    border: 1px solid #DADDE1 !important;
+    border-radius: 12px !important;
+    padding: 16px 20px !important;
+    text-align: left !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin-bottom: 12px !important;
+}
+
+.card:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04) !important;
+    border-color: #ccd0d5 !important;
+}
+
+.card h3 {
+    margin: 0 0 4px 0 !important;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: #050505 !important;
+}
+
+.card p {
+    margin: 0 !important;
+    color: #65676B !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+}
+
+/* Statistical Indicator Cards */
+.stat {
+    background: #ffffff !important;
+    border: 1px solid #DADDE1 !important;
+    border-radius: 12px !important;
+    padding: 14px !important;
+    text-align: center !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01) !important;
+    transition: transform 0.2s ease !important;
+}
+
+.stat:hover {
+    transform: translateY(-1px) !important;
+    border-color: #1877F2 !important;
+}
+
+.stat h4 {
+    margin: 0 !important;
+    color: #65676B !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.stat .v {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: #1877F2 !important;
+    margin-top: 4px !important;
+}
+
+/* Meta-Style Structured Banner Alerts - Tightened */
+.banner {
+    padding: 14px 20px !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    text-align: left !important;
+    margin: 12px 0 !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02) !important;
+}
+
+.banner h2 {
+    margin: 0 !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+}
+
+.banner p {
+    margin: 2px 0 0 0 !important;
+    opacity: 0.95 !important;
+    font-size: 0.9rem !important;
+    color: #ffffff !important;
+}
+
+/* Sidebar Canvas and Separation - Tightened */
+[data-testid="stSidebar"] {
+    background-color: #F0F2F5 !important;
+    border-right: 1px solid #DADDE1 !important;
+}
+
+[data-testid="stSidebar"] h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    gap: 0.4rem !important;
+}
+
+/* Resolve Sidebar visibility conflicts and ensure 100% legibility of radio options */
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    background-color: transparent !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin-bottom: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+    background-color: rgba(24, 119, 242, 0.04) !important;
+    transform: translateX(2px) !important;
+}
+
+/* Active Highlight Accent for selected sidebar page (#1877F2) */
+[data-testid="stSidebar"] [role="radiogroup"] div[data-checked="true"] label,
+[data-testid="stSidebar"] [role="radiogroup"] label[data-checked="true"] {
+    background-color: rgba(24, 119, 242, 0.08) !important;
+    border-left: 4px solid #1877F2 !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    padding-left: 10px !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] div[data-checked="true"] p,
+[data-testid="stSidebar"] [role="radiogroup"] label[data-checked="true"] p {
+    color: #1877F2 !important;
+    font-weight: 600 !important;
+}
+
+/* Proactively force sidebar texts, headings, and labels to render with high-contrast ink-black values */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label div,
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    color: #1c1e21 !important;
+    font-weight: 500 !important;
+    font-family: 'Poppins', 'Inter', sans-serif !important;
+}
+
+/* Sidebar caption visibility */
+[data-testid="stSidebar"] caption,
+[data-testid="stSidebar"] .st-emotion-cache-1gulk7 {
+    color: #65676B !important;
+}
+
+/* Make the sidebar collapse/expand floating button extremely visible, high contrast, and gorgeous */
+[data-testid="stSidebarCollapseButton"] button,
+button[data-testid="sidebar-collapse-button"] {
+    background-color: #ffffff !important;
+    border: 1px solid #DADDE1 !important;
+    color: #1877F2 !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 999999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force the expand button to float as a fixed circular button in the top left, completely bypassing any overflow or clipping boundaries */
+[data-testid="collapsedSidebar"] button,
+button[data-testid="sidebar-expand-button"],
+div[data-testid="collapsedSidebar"] button {
+    position: fixed !important;
+    top: 8px !important;
+    left: 8px !important;
+    background-color: #ffffff !important;
+    border: 1px solid #DADDE1 !important;
+    color: #1877F2 !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+[data-testid="stSidebarCollapseButton"] button:hover,
+button[data-testid="sidebar-collapse-button"]:hover,
+[data-testid="collapsedSidebar"] button:hover,
+button[data-testid="sidebar-expand-button"]:hover,
+div[data-testid="collapsedSidebar"] button:hover {
+    background-color: #1877F2 !important;
+    color: #ffffff !important;
+    transform: scale(1.08) !important;
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.2) !important;
+    border-color: #1877F2 !important;
+}
+
+[data-testid="stSidebarCollapseButton"] button svg,
+[data-testid="stSidebarCollapseButton"] button span,
+button[data-testid="sidebar-collapse-button"] svg,
+button[data-testid="sidebar-collapse-button"] span,
+[data-testid="collapsedSidebar"] button svg,
+[data-testid="collapsedSidebar"] button span,
+button[data-testid="sidebar-expand-button"] svg,
+button[data-testid="sidebar-expand-button"] span,
+div[data-testid="collapsedSidebar"] button svg,
+div[data-testid="collapsedSidebar"] button span {
+    color: inherit !important;
+    fill: currentColor !important;
+}
+
+/* Input Fields and Selectors - Force high contrast readable black values on text selections */
+div[data-baseweb="select"] > div, input, textarea {
+    border-radius: 8px !important;
+    border-color: #DADDE1 !important;
+    color: #050505 !important;
+    background-color: #ffffff !important;
+    transition: all 0.2s ease !important;
+}
+
+div[data-baseweb="select"] span, div[data-baseweb="select"] div {
+    color: #050505 !important;
+}
+
+div[data-baseweb="select"] > div:focus-within, input:focus, textarea:focus {
+    border-color: #1877F2 !important;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.12) !important;
+}
+
+/* Ensure global label visibility for select-box labels, sliders, and form legends */
+label, .stWidgetLabel, [data-testid="stWidgetLabel"] p {
+    color: #050505 !important;
+    font-weight: 500 !important;
+}
+
+/* Progress Bar Customisations */
+div[role="progressbar"] {
+    border-radius: 100px !important;
+    overflow: hidden !important;
+}
+
+div[role="progressbar"] > div {
+    background-color: #1877F2 !important;
+}
+
+/* Chat Bubbles (AI Assistant Page) */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.chat-bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.chat-bubble.user {
+    align-self: flex-end;
+    background-color: #1877F2;
+    color: #ffffff !important;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.user * {
+    color: #ffffff !important;
+}
+
+.chat-bubble.assistant {
+    align-self: flex-start;
+    background-color: #F0F2F5;
+    color: #050505 !important;
+    border-bottom-left-radius: 4px;
+    border: 1px solid #DADDE1;
+}
+
+.chat-bubble.assistant * {
+    color: #050505 !important;
+}
+
+/* Styled Educational Recommendation Alerts */
+.recommendation-alert {
+    background-color: rgba(24, 119, 242, 0.05) !important;
+    border-left: 4px solid #1877F2 !important;
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    margin: 12px 0 !important;
+    color: #050505 !important;
+}
+
+/* Responsive Footer */
+/* Responsive Footer */
+.footer {
+    font-size: 0.8rem;
+    color: #65676B;
+    text-align: center;
+    margin-top: 60px;
+    padding: 16px 0;
+    border-top: 1px solid #DADDE1;
+    line-height: 1.5;
+}
+
+/* ── Premium Landing Page Styles ────────────────────────────────────── */
+
+.hero-badge {
+    display: inline-block !important;
+    background-color: rgba(24, 119, 242, 0.08) !important;
+    color: #1877F2 !important;
+    padding: 6px 14px !important;
+    border-radius: 100px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 16px !important;
+    letter-spacing: 0.2px !important;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    color: #1877F2 !important;
+    line-height: 1.1 !important;
+    margin: 0 0 12px 0 !important;
+    letter-spacing: -0.03em !important;
+}
+
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: #1c1e21 !important;
+    line-height: 1.25 !important;
+    margin: 0 0 16px 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.hero-desc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+    color: #65676B !important;
+    margin: 0 0 24px 0 !important;
+}
+
+.btn-github-cta {
+    display: inline-flex !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 52px !important;
+    box-sizing: border-box !important;
+    border-radius: 100px !important;
+    font-family: 'Poppins', 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: #050505 !important;
+    background-color: #F0F2F5 !important;
+    border: 1px solid #DADDE1 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    margin-top: 12px !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01) !important;
+}
+
+.btn-github-cta:hover {
+    background-color: #E4E6EB !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+    color: #050505 !important;
+}
+
+/* Grids and Headlines */
+.section-title-wrapper {
+    margin-top: 48px !important;
+    margin-bottom: 24px !important;
+    border-bottom: 1px solid #E4E6EB !important;
+    padding-bottom: 12px !important;
+}
+
+.section-headline {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+    color: #050505 !important;
+    margin: 0 !important;
+}
+
+/* Trust Metrics Grid */
+.metrics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 16px !important;
+    margin: 24px 0 !important;
+}
+
+.metric-card {
+    background-color: #ffffff !important;
+    border: 1px solid #E4E6EB !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+    transition: all 0.25s ease !important;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 30px rgba(24, 119, 242, 0.08) !important;
+    border-color: #1877F2 !important;
+}
+
+.metric-icon {
+    font-size: 32px !important;
+    color: #1877F2 !important;
+    margin-bottom: 12px !important;
+}
+
+.metric-num {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #1877F2 !important;
+    margin-bottom: 6px !important;
+}
+
+.metric-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #050505 !important;
+    margin-bottom: 6px !important;
+}
+
+.metric-desc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.85rem !important;
+    color: #65676B !important;
+    line-height: 1.4 !important;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 16px !important;
+    margin: 24px 0 !important;
+}
+
+.feature-card {
+    background-color: #ffffff !important;
+    border: 1px solid #E4E6EB !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+    transition: all 0.25s ease !important;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 30px rgba(24, 119, 242, 0.08) !important;
+    border-color: #1877F2 !important;
+}
+
+.feature-icon {
+    font-size: 28px !important;
+    color: #1877F2 !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+}
+
+.feature-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #050505 !important;
+    margin-bottom: 8px !important;
+}
+
+.feature-desc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9rem !important;
+    color: #65676B !important;
+    line-height: 1.45 !important;
+}
+
+/* Steps Workflow Flow */
+.steps-flow {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 20px !important;
+    margin: 24px 0 !important;
+}
+
+.step-card {
+    background-color: #ffffff !important;
+    border: 1px solid #E4E6EB !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    position: relative !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+}
+
+.step-num {
+    position: absolute !important;
+    top: -12px !important;
+    left: 20px !important;
+    width: 28px !important;
+    height: 28px !important;
+    background-color: #1877F2 !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    box-shadow: 0 2px 6px rgba(24, 119, 242, 0.3) !important;
+}
+
+.step-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #050505 !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.step-desc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9rem !important;
+    color: #65676B !important;
+    line-height: 1.45 !important;
+}
+
+/* Open-Source Mission Section */
+.mission-banner {
+    background-color: rgba(24, 119, 242, 0.04) !important;
+    border: 1px dashed rgba(24, 119, 242, 0.3) !important;
+    border-radius: 24px !important;
+    padding: 28px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    margin: 32px 0 !important;
+}
+
+.mission-logo {
+    font-size: 36px !important;
+    color: #1877F2 !important;
+    margin-top: 2px !important;
+}
+
+.mission-content {
+    flex: 1 !important;
+}
+
+.mission-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: #1877F2 !important;
+    margin: 0 0 8px 0 !important;
+}
+
+.mission-desc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.95rem !important;
+    color: #1c1e21 !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+}
+
+/* Disclaimer Alert Box styling */
+.disclaimer-alert-box {
+    background-color: rgba(247, 185, 40, 0.05) !important;
+    border-left: 4px solid #F7B928 !important;
+    border-radius: 12px !important;
+    padding: 16px 20px !important;
+    margin: 32px 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+}
+
+.disclaimer-alert-icon {
+    color: #F7B928 !important;
+    font-size: 24px !important;
+    margin-top: 1px !important;
+}
+
+.disclaimer-alert-content {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.92rem !important;
+    color: #1c1e21 !important;
+    line-height: 1.5 !important;
+}
+

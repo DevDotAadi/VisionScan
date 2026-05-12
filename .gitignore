@@ -1,0 +1,40 @@
+# Secrets and Configuration
+.env
+.env.local
+.env.*.local
+
+# Kaggle & API Cache
+.kaggle/
+.cache/
+
+# Python Build & Caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Datasets and Large Models (Local Ignored Paths)
+models/
+data/
+results/
+test_images/benign/
+test_images/malignant/
+
+# Image/Weights Formats
+*.h5
+*.keras
+*.pb
+*.tflite
+
+# OS Files
+.DS_Store
+Thumbs.db
